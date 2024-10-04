@@ -1,5 +1,17 @@
 {
   "dependencies": {
+    "express": "^4.21.0",
+    "mysql": "^2.18.1",
     "natural": "^8.0.1"
-  }
+  },
+  "name": "movie-recommendation-algorithm",
+  "version": "1.0.0",
+  "main": "recommender.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
