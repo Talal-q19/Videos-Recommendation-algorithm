@@ -9,15 +9,20 @@ app.use('/images', express.static(path.join(__dirname, 'images')));
 
 
 
-
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'MovieDB'
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'MovieDB'
 });
 
-connection.connect();
+connection.connect((err) => {
+  if (err) {
+    console.error('error connecting:', err);
+    return;
+  }
+  console.log('Connected to database!');
+});
 
 app.use(express.static('public'));
 
